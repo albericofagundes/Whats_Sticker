@@ -3,6 +3,17 @@ const qrcode = require("qrcode-terminal");
 const axios = require("axios");
 const client = new Client({});
 
+client.on("qr", (qr) => {
+  qrcode.generate(qr, { small: true });
+});
+
+client.on("ready", () => {
+  console.log(
+    "O Wpp-Sticker está pronto 😋 Não esquece da estrelinha no repo ⭐"
+  );
+});
+
+client.initialize();
 // import { create } from "venom-bot";
 // import pkg from "whatsapp-web.js";
 // const { MessageMedia } = pkg;
