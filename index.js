@@ -1,4 +1,6 @@
 import { create } from "venom-bot";
+import pkg from "whatsapp-web.js";
+const { MessageMedia } = pkg;
 
 create({
   session: "chat-gpt",
@@ -9,14 +11,29 @@ create({
     console.log(erro);
   });
 
+const commands = (client, message) => {
+  const command = message.body.split(' ')[0];
+  console.log("message.text", message.text);
+  console.log("command", command);
+
+
+
+
+  const iaCommands = {
+    sticker: "/fig",
+    img: "/img",
+    gpt: "/bot",
+    
+  };
+  
+
+  let firstWord = message.text.substring(0, message.text.indexOf(" "));
+  console.log("firstWord", firstWord);
+};
+
 async function start(client) {
-  const botText = "🤖 world 🌎";
-  // Da um console.log em message depois, tem muita coisa bacana
-  client.onAnyMessage((message) => {
-    console.log("message", message);
-    if (message.body.toLowerCase() === "hello") {
-      // message.from é o número do usuário que enviou a msg "hello"
-      client.sendText(message.from, botText);
-    }
-  });
+  console.log("startou");
+  client.onAnyMessage((message) => commands(client, message));
+  console.log("client", client);
+  console.log("message", message);
 }
