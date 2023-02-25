@@ -1,0 +1,23 @@
+{
+  "name": "whats_sticker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albericofagundes/Whats_Sticker.git"
+  },
+  "author": "Alberico Fagundes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albericofagundes/Whats_Sticker/issues"
+  },
+  "homepage": "https://github.com/albericofagundes/Whats_Sticker#readme",
+  "dependencies": {
+    "venom-bot": "^4.3.7"
+  }
+}
