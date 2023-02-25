@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/albericofagundes/Whats_Sticker#readme",
   "dependencies": {
-    "venom-bot": "^4.3.7"
+    "venom-bot": "^4.3.7",
+    "whatsapp-web.js": "^1.19.4"
   }
 }
